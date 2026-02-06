@@ -1,0 +1,74 @@
+//Number of digits
+#include <stdio.h>
+
+int main()
+{
+    int num,count =0;
+    scanf("%d",&num);
+    while(num != 0){
+        num = num/10;
+        count++;
+    }
+    printf("Number of digits: %d",count);
+    return 0;
+}
+
+//uppercase to lowercase
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    scanf("%c",&ch);
+    if(ch>='a' && ch<='z'){
+        ch = ch - 32;
+        printf("%c",ch);
+    }else if(ch>='A' && ch<='Z'){
+        ch = ch + 32;
+        printf("%c",ch);
+    }else{
+        printf("Enter an alphabet only");
+    }
+    return 0;
+}
+
+//sum of digits
+#include<stdio.h>
+int main(){
+    int num,sum = 0,d;
+    scanf("%d",&num);
+    while(num!=0){
+        d = num % 10;
+        sum = sum + d;
+        num = num / 10;
+    }
+    printf("%d",sum);
+    return 0;
+}
+
+//largest numbers in 3 numbers using ternary operator
+#include<stdio.h>
+int main(){
+  int a,b,c;
+  scanf("%d%d%d",&a,&b,&c);
+  int res = (a >= b) ? ((a >= c)? a : c): ((b >= c) ? b : c);
+  printf("%d",res);
+  return 0;
+}
+
+//2nd largest number
+#include<stdio.h>
+int main(){
+   int a,b,c;
+   scanf("%d%d%d",&a,&b,&c);
+   if(a < b){
+    if(c < b){
+        printf("%d is the 2nd greatest number",c);
+    }else{
+       printf("%d is the 2nd greatest number",b);
+    }
+   }else{
+    printf("%d is the 2nd greatest number",a);
+   }
+   return 0;
+}
